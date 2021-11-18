@@ -12,11 +12,11 @@ def loadWords():
     """
     print("Loading word list from file...")
     # inFile: file
-    inFile = open(WORDLIST_FILENAME, 'r')
+    with open('words.txt') as f:
     # line: string
-    line = inFile.readline()
+        lines = f.readline()
     # wordlist: list of strings
-    wordlist = line.split()
+    wordlist = lines.split()
     print("  ", len(wordlist), "words loaded.")
     return wordlist
 
