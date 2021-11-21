@@ -10,7 +10,7 @@ def loadWords():
     Depending on the size of the word list, this function may
     take a while to finish.
     """
-    print("Loading word list from file...")
+    print("words available loading")
     # inFile: file
     with open('words.txt') as f:
     # line: string
@@ -102,7 +102,7 @@ def hangman(secretWord):
     Follows the other limitations detailed in the problem write-up.
     '''
     print("Welcome to the game, Hangman!")
-    print("I am thinking of a word that is",len(secretWord),"letters long.")
+    print("The word i am thinking of is",len(secretWord),"letters long.")
     
     global lettersGuessed
     mistakeMade=0
@@ -117,7 +117,7 @@ def hangman(secretWord):
             
         else:
             print("-------------")
-            print("You have",8-mistakeMade,"guesses left.")
+            print("You have",7-mistakeMade,"guesses left.")
             print("Available letters:",getAvailableLetters(lettersGuessed))
             guess=str(input("Please guess a letter: ")).lower()
             
