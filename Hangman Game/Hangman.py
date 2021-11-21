@@ -112,7 +112,7 @@ def hangman(secretWord):
         
         if isWordGuessed(secretWord, lettersGuessed):
             print("-------------")
-            print("Congratulations, you won!")
+            print("Congratulations, you are the winner!")
             break
             
         else:
@@ -122,7 +122,7 @@ def hangman(secretWord):
             guess=str(input("Please guess a letter: ")).lower()
             
             if guess in lettersGuessed:
-                print("Oops! You've already guessed that letter:",getGuessedWord(secretWord,lettersGuessed))
+                print("Oops! That letter has already been guessed:",getGuessedWord(secretWord,lettersGuessed))
                 
             elif guess in secretWord and guess not in lettersGuessed:
                 lettersGuessed.append(guess)
