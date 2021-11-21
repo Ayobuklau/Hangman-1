@@ -108,7 +108,7 @@ def hangman(secretWord):
     mistakeMade=0
     lettersGuessed=[]
     
-    while 8 - mistakeMade > 0:
+    while 7 - mistakeMade > 0:
         
         if isWordGuessed(secretWord, lettersGuessed):
             print("-------------")
@@ -133,7 +133,7 @@ def hangman(secretWord):
                 mistakeMade += 1
                 print("Oops! That letter is not in my word:",getGuessedWord(secretWord,lettersGuessed))
                 
-        if 8 - mistakeMade == 0:
+        if 7 - mistakeMade == 0:
             print("-------------")
             print("Sorry, you ran out of guesses. The word was else.",secretWord)
             break
