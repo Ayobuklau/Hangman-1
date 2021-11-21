@@ -126,7 +126,7 @@ def hangman(secretWord):
                 
             elif guess in secretWord and guess not in lettersGuessed:
                 lettersGuessed.append(guess)
-                print("Good guess:",getGuessedWord(secretWord,lettersGuessed))
+                print("guess was good:",getGuessedWord(secretWord,lettersGuessed))
                 
             else:
                 lettersGuessed.append(guess)
